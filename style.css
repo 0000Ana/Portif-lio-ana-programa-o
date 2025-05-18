@@ -85,3 +85,31 @@ footer {
   margin-top: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+/* Animação para o avatar */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  }
+}
+
+.avatar {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Animação para o título */
+h1 {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
